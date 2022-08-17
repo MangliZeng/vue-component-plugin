@@ -6,5 +6,5 @@ dev
 issues
 node_modules
 coverage
-
-/example/
+example/
+example_/
