@@ -6,3 +6,5 @@ dev
 issues
 node_modules
 coverage
+
+/example/

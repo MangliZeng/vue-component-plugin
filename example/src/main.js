@@ -18,6 +18,7 @@ Vue.component('github-button', GithubButton)
 
 Vue.config.devtools = false
 Vue.config.productionTip = false
+Vue.prototype.$router = router
 
 new Vue({
   router,

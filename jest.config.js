@@ -7,7 +7,7 @@ module.exports = {
   coverageReporters: [
     'lcov',
     'html',
-    'text-summary',
+    'text-summary'
   ],
   collectCoverageFrom: [
     '<rootDir>/src/*.js'
@@ -19,6 +19,6 @@ module.exports = {
   transform: {
     '.*\\.(vue)$': 'vue-jest',
     '^.+\\.js$': '<rootDir>/node_modules/babel-jest'
-  },
+  }
   // testRegex: 'scroll.test.js?$'
 }
