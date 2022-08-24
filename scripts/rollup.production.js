@@ -1,6 +1,7 @@
 import bannerString from './rollup.banner'
 import commonjs from 'rollup-plugin-commonjs'
 import vue from 'rollup-plugin-vue'
+import babel from 'rollup-plugin-babel'
 
 export default {
   external: ['vue'],
@@ -15,14 +16,17 @@ export default {
     banner: bannerString.replace(/\n/, '')
   },
   plugins: [
-    commonjs({
-      include: '/node_modules/'
-    }),
     vue({
       css: true,
       compileTemplate: true,
-      include: /\.vue$/,
-      target: 'browser'
+      include: /\.vue$/
+    }),
+    babel({
+      presets: ['@vue/babel-preset-jsx'],
+      extensions: ['.js', '.jsx', '.es6', '.es', '.mjs', '.vue']
+    }),
+    commonjs({
+      exclude: '/node_modules/'
     })
   ]
 }
